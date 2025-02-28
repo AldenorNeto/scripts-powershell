@@ -37,7 +37,7 @@ $CurrentDirectory = Get-Location
 # Ignore folders similar to .gitignore
 $IgnoreFolders = @(
     'logs', 'pids', 'lib-cov', 'coverage', '.nyc_output', '.grunt',
-    'bower_components', 'build', 'node_modules', 'jspm_packages', 'web_modules',
+    'bower_components', 'build', 'node_modules', '.venv', 'jspm_packages', 'web_modules',
     '.npm', '.rpt2_cache', '.rts2_cache_cjs', '.rts2_cache_es', '.rts2_cache_umd',
     '.yarn-integrity', '.cache', '.parcel-cache', '.next', 'out', '.nuxt', 'dist',
     '.vuepress', '.temp', '.docusaurus', '.serverless', '.fusebox', '.dynamodb',
