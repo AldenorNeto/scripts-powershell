@@ -59,7 +59,11 @@ $IgnoreFolders = @(
     # Pastas comuns de C#
     'bin', 'obj', '.vs', '.vscode', 'packages', 'TestResults', 'artifacts',
     'Publish', '.dotnet', '.sonarqube', '.local', '.msbuild', '.nuget',
-    '.idea', '.resharper', '*.user', '*.suo', '*.cache', '*.nupkg'
+    '.idea', '.resharper', '*.user', '*.suo', '*.cache', '*.nupkg',
+
+    # Pastas e arquivos relacionados ao Git
+    '.git', '.gitignore', '.gitmodules', '.gitattributes', '.gitkeep',
+    '.gitlab-ci.yml', '.github', '.gitreview', '.gitconfig'
 )
 
 # Start mapping from the current directory
