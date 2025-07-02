@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -euo pipefail
-
 shopt -s dotglob nullglob
 
 max_depth=4
@@ -41,6 +40,8 @@ for folder in "${ignore_folders[@]}"; do
     ignore["$folder"]=1
 done
 
+file_paths=()
+
 traverse() {
     local path="$1"
     local current_depth="$2"
@@ -62,8 +63,17 @@ traverse() {
             traverse "$item" $((current_depth + 1)) "$max_depth"
         else
             printf "%${indent}s|-- %s\n" "" "$name"
+            # Salva caminho relativo sem "./" inicial
+            rel_path="${item#./}"
+            file_paths+=("$rel_path")
         fi
     done
 }
 
 traverse "." 0 "$max_depth"
+
+echo
+echo "Arquivos encontrados:"
+for path in "${file_paths[@]}"; do
+    echo "$path"
+done
