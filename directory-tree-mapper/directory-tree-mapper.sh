@@ -3,7 +3,7 @@
 set -euo pipefail
 shopt -s dotglob nullglob
 
-max_depth=4
+max_depth=6
 if [[ $# -gt 0 ]]; then
     if [[ $1 =~ ^[0-9]+$ ]]; then
         max_depth=$1
