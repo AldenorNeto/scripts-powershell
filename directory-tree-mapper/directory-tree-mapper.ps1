@@ -1,5 +1,5 @@
 param(
-    [int]$MaxDepth = 4
+    [int]$MaxDepth = 6
 )
 
 function Get-DirectoryTree {
